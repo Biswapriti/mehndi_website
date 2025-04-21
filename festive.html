@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUBHA MEHENDI - Festive Mehendi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+                <h1>SUBHA MEHENDI</h1>
+                <div id="menu">&#9776;</div>   <!-- Hamburger menu for responsive design --> 
+                <button id="backToTop" title="Go to top">&#8673;</button>                 
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#gallery">Gallery</a></li>
+                    <li><a href="{{ url_for('home') }}#services">Services</a></li>
+                    <li><a href="{{ url_for('home') }}#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Festive Mehendi Section -->
+    <section class="services" id="festive-mehendi">
+        <h2>Festive Mehendi Packages</h2>
+        <div class="services-container">
+
+            <!-- Diwali Special Mehendi -->
+            <div class="package-item">
+                <img src="{{ url_for('static', filename='diwali1.jpg') }}" alt="Diwali Special Mehendi">
+                <h3>Diwali Special Mehendi</h3>
+                <p>Intricate floral and diya patterns symbolizing light and prosperity.</p>
+                <strong>Price: ₹1,500 - ₹2,500</strong>
+                <button class="book-btn" onclick="bookNow('Diwali Special Mehendi', 1500)">Book Now</button>
+            </div>
+
+            <!-- Eid Celebration Mehendi -->
+            <div class="package-item">
+                <img src="{{ url_for('static', filename='eid.jpg') }}" alt="Eid Celebration Mehendi">
+                <h3>Eid Celebration Mehendi</h3>
+                <p>Elegant Arabic and Mughal-inspired designs with crescent moons and stars.</p>
+                <strong>Price: ₹1,800 - ₹3,000</strong>
+                <button class="book-btn" onclick="bookNow('Eid Celebration Mehendi', 1800)">Book Now</button>
+            </div>
+
+            <!-- Karwa Chauth Mehendi -->
+            <div class="package-item">
+                <img src="{{ url_for('static', filename='karva.jpg') }}" alt="Karwa Chauth Mehendi">
+                <h3>Karwa Chauth Mehendi</h3>
+                <p>Rich traditional patterns, including moon and sieve motifs, symbolizing love and devotion.</p>
+                <strong>Price: ₹2,000 - ₹3,500</strong>
+                <button class="book-btn" onclick="bookNow('Karwa Chauth Mehendi', 2000)">Book Now</button>
+            </div>
+
+            <!-- Navratri Mehendi -->
+            <div class="package-item">
+                <img src="{{ url_for('static', filename='festive1.jpg') }}" alt="Navratri Mehendi">
+                <h3>Navratri Mehendi</h3>
+                <p>Vibrant and bold designs with goddess motifs and traditional elements.</p>
+                <strong>Price: ₹2,200 - ₹3,800</strong>
+                <button class="book-btn" onclick="bookNow('Navratri Mehendi', 2200)">Book Now</button>
+            </div>
+
+            <!-- Christmas Mehendi -->
+            <div class="package-item">
+                <img src="{{ url_for('static', filename='festive2.jpg') }}" alt="Christmas Mehendi">
+                <h3>Christmas Mehendi</h3>
+                <p>Fusion of festive snowflakes, bells, and ornamental patterns.</p>
+                <strong>Price: ₹1,500 - ₹2,800</strong>
+                <button class="book-btn" onclick="bookNow('Christmas Mehendi', 1500)">Book Now</button>
+            </div>
+
+            <!-- Holi Mehendi -->
+            <div class="package-item">
+                <img src="{{ url_for('static', filename='holi.jpg') }}" alt="Holi Mehendi">
+                <h3>Holi Mehendi</h3>
+                <p>Colorful and artistic designs representing joy and celebrations.</p>
+                <strong>Price: ₹1,800 - ₹3,200</strong>
+                <button class="book-btn" onclick="bookNow('Holi Mehendi', 1800)">Book Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Types of Festive Mehendi -->
+    <section class="mehendi-types">
+        <h2>OUR SERVICES</h2>
+        <div class="mehendi-container">
+
+            <div class="mehendi-item">
+                <h3>Bridal Mehendi</h3>
+                <a href="{{ url_for('bridal') }}">
+                    <img src="{{ url_for('static', filename='bridal_mehndi.jpg') }}" alt="Bridal Mehendi"></a>
+            </div>
+
+            <div class="mehendi-item">
+                <h3>Arabic Mehendi</h3>
+                <a href="{{ url_for('arabic') }}">
+                    <img src="{{ url_for('static', filename='arabic_mehndi.jpeg') }}" alt="Arabic Mehendi"></a>
+            </div>
+
+            <div class="mehendi-item">
+                <h3>Customized Mehendi</h3>
+                <a href="{{ url_for('customized') }}">
+                    <img src="{{ url_for('static', filename='custo5.jpg') }}" alt="Customized Mehendi"></a>
+            </div>
+
+            <div class="mehendi-item">
+                <h3>Traditional Mehndi</h3>
+                <a href="{{ url_for('traditional') }}">
+                    <img src="{{ url_for('static', filename='trad.jpg') }}" alt="Traditional Mehendi"></a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <p><i class="fa-solid fa-phone"></i> Phone: <a href="tel:+917815064177">+91 78150 64177</a></p>
+            <p><i class="fa-solid fa-envelope"></i> Email: <a
+                    href="mailto:biswapritij15@gmail.com">biswapritij15@gmail.com</a></p>
+            <p><i class="fa-solid fa-map-marker-alt"></i> Address: Bhubaneswar, Odisha, India</p>
+            <p><i class="fa-solid fa-map"></i> <a href="https://goo.gl/maps/dt5jSg8bGdT2" target="_blank">View on Google
+                    Maps</a></p>
+        </div>
+    </section>
+
+    <section class="offer">
+        <h2>Limited Time Offer!</h2>
+        <p>Book within <span id="countdown"></span> to get 10% off on all bridal packages!</p>
+    </section>
+
+    <script>
+        function startCountdown(durationInMinutes) {
+            let endTime = new Date().getTime() + durationInMinutes * 60 * 1000;
+
+            function updateCountdown() {
+                let now = new Date().getTime();
+                let timeLeft = endTime - now;
+
+                if (timeLeft < 0) {
+                    document.getElementById("countdown").innerHTML = "Offer Expired! 😞";
+                    clearInterval(timer);
+                    return;
+                }
+
+                let minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+                let seconds = Math.floor((timeLeft / 1000) % 60);
+
+                document.getElementById("countdown").innerHTML = minutes + "m " + seconds + "s";
+            }
+
+            let timer = setInterval(updateCountdown, 1000);
+            updateCountdown();
+        }
+
+        startCountdown(15);
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyrights &#169; www.subhamehndi.com | All rights reserved</p>
+        <div class="vertical">
+            <div class="icons">
+                <a href="https://www.youtube.com/@subhamehendi" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/biswapriti_132?igsh=MWkxZjhycHY2ZmEyZA==" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>         
+                <a href="https://www.facebook.com/deeptimayee.pradhan.123377298" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/biswapriti_132" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Booking Link -->
+    <a href="https://wa.me/917815064177?text=I'm%20interested%20in%20Festive%20Mehendi" class="whatsapp-btn"
+        target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> Chat with Us
+    </a>
+
+    <!-- JavaScript for Booking -->
+    <script>
+        function bookNow(packageName, price) {
+            let whatsappNumber = "917815064177";
+            let message = `Hello, I'm interested in the ${packageName} package for ₹${price}. Can I book an appointment?`;
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

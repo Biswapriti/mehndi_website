@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subha Mehendi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+                <h1>SUBHA MEHENDI</h1>
+            <div id="menu">&#9776;</div>   <!-- Hamburger menu for responsive design --> 
+            <button id="backToTop" title="Go to top">&#8673;</button>    
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="slider">
+            <div class="slides">
+                <!-- Slide Images -->
+                <div class="slide"><img src="{{ url_for('static', filename='bg2.jpg') }}" alt="Mehendi Design 1"></div>
+                <div class="slide"><img src="{{ url_for('static', filename='mehendi3.jpg') }}" alt="Mehendi Design 1"></div>
+                <div class="slide"><img src="{{ url_for('static', filename='bg3.jpg') }}" alt="Mehendi Design 2"></div>
+                <div class="slide"><img src="{{ url_for('static', filename='mehndi.jpg') }}" alt="Mehendi Design 3"></div>
+                <div class="slide"><img src="{{ url_for('static', filename='mehndi2.jpg') }}" alt="Mehendi Design 4"></div>
+                <div class="slide"><img src="{{ url_for('static', filename='bg5.jpg') }}" alt="Mehendi Design 4"></div>
+            </div>
+            <!-- Navigation Buttons -->
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="hero-content">
+            <h2>Elevate Tradition with Our Exquisite Mehendi Designs</h2>
+            <p>Get the most beautiful and intricate Mehendi for your special occasions.</p>
+            <button class="btn" onclick="scrollToContact()">Contact Now</button>
+        </div>
+    </section>
+
+    <script>
+        let index = 0;
+
+        function scrollToContact() {
+            document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slide').length;
+
+            if (n >= totalSlides) index = 0;
+            if (n < 0) index = totalSlides - 1;
+
+            slides.style.transform = `translateX(${-index * 100}vw)`;
+        }
+
+        function nextSlide() {
+            index++;
+            showSlide(index);
+        }
+
+        function prevSlide() {
+            index--;
+            showSlide(index);
+        }
+
+        // Auto Slide Every 3 Seconds
+        setInterval(() => {
+            nextSlide();
+        }, 3000);
+    </script>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <!-- Left Side - Image -->
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='bg1.jpg') }}" alt="Beautiful Mehendi Art">
+            </div>
+
+            <!-- Right Side - Content -->
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Welcome to <strong>SUBHA MEHENDI</strong>, your one-stop destination for exquisite Mehendi artistry.</p>
+                <p>Mehendi, also known as Henna, is an ancient art form that symbolizes joy, beauty, and celebration. It is an essential part of weddings, festivals, and special occasions.</p>
+                <p>At <strong>SUBHA MEHENDI</strong>, we offer intricate and creative Mehendi designs, tailored for every occasion. Whether you prefer **traditional bridal Mehendi, modern Arabic patterns, or custom contemporary styles**, our skilled artists ensure perfection in every stroke.</p>
+                <p>With our commitment to **quality, creativity, and customer satisfaction**, we strive to make your Mehendi experience truly memorable.</p>
+                <a href="{{ url_for('explore') }}" class="btn">Explore More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <img src="{{ url_for('static', filename='bridalmehndi.jpg') }}" alt="Mehendi Design 1">
+            <img src="{{ url_for('static', filename='ara.jpg') }}" alt="Mehendi Design 2">
+            <img src="{{ url_for('static', filename='A.jpg') }}" alt="Mehendi Design 3">
+            <img src="{{ url_for('static', filename='bridal1.jpg') }}" alt="Mehendi Design 4">
+            <img src="{{ url_for('static', filename='C.jpg') }}" alt="Mehendi Design 5">
+            <img src="{{ url_for('static', filename='back-hand.jpg') }}" alt="Mehendi Design 6">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <!-- Bridal Mehendi -->
+            <div class="service-item">
+                <h3>Bridal Mehendi</h3>
+                <a href="{{ url_for('bridal') }}">
+                    <img src="{{ url_for('static', filename='bridal_mehndi.jpg') }}" alt="Bridal Mehendi">
+                </a>
+                <a href="{{ url_for('bridal') }}" class="btn">Know More</a>
+            </div>
+
+            <!-- Traditional Mehendi -->
+            <div class="service-item">
+                <h3>Traditional Mehendi</h3>
+                <a href="{{ url_for('traditional') }}">
+                    <img src="{{ url_for('static', filename='trad.jpg') }}" alt="Traditional Mehendi">
+                </a>
+                <a href="{{ url_for('traditional') }}" class="btn">Know More</a>
+            </div>
+
+            <!-- Arabic Mehendi -->
+            <div class="service-item">
+                <h3>Arabic Mehendi</h3>
+                <a href="{{ url_for('arabic') }}">
+                    <img src="{{ url_for('static', filename='arabic_mehndi.jpeg') }}" alt="Arabic Mehendi">
+                </a>
+                <a href="{{ url_for('arabic') }}" class="btn">Know More</a>
+            </div>
+
+            <!-- Customized Mehendi -->
+            <div class="service-item">
+                <h3>Customized Mehendi</h3>
+                <a href="{{ url_for('customized') }}">
+                    <img src="{{ url_for('static', filename='custo5.jpg') }}" alt="Customized Mehendi">
+                </a>
+                <a href="{{ url_for('customized') }}" class="btn">Know More</a>
+            </div>
+
+            <!-- Festive Mehendi -->
+            <div class="service-item">
+                <h3>Festive Mehendi</h3>
+                <a href="{{ url_for('festive') }}">
+                    <img src="{{ url_for('static', filename='festive.jpg') }}" alt="Festive Mehendi">
+                </a>
+                <a href="{{ url_for('festive') }}" class="btn">Know More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Instagram Section Container -->
+    <section class="contact-instagram-container">
+
+        <!-- Instagram Section (Left Side) -->
+        <section class="instagram" id="instagram">
+            <h2>Our Latest Work</h2>
+            <p>Follow us on Instagram for more beautiful Mehendi designs!</p>
+            <div class="insta-gallery">
+                <div class="insta-item">
+                    <img src="{{ url_for('static', filename='bridal.jpg') }}" alt="Mehendi Design 1">
+                    <p>Elegant Bridal Mehendi</p>
+                </div>
+                <div class="insta-item">
+                    <img src="{{ url_for('static', filename='insta.jpg') }}" alt="Mehendi Design 2">
+                    <p>Traditional Rajasthani Style</p>
+                </div>
+                <div class="insta-item">
+                    <img src="{{ url_for('static', filename='arabic _mehndi_insta.jpg') }}" alt="Mehendi Design 3">
+                    <p>Modern Arabic Patterns</p>
+                </div>
+                <div class="insta-item">
+                    <img src="{{ url_for('static', filename='customized_mehndi_insta.jpg') }}" alt="Mehendi Design 4">
+                    <p>Beautiful Customized Mehndi</p>
+                </div>
+            </div>
+            <a href="https://www.instagram.com/your_instagram_handle" target="_blank" class="insta-btn">
+                See More on Instagram
+            </a>
+        </section>
+
+
+        <!-- Contact Section (Right Side) -->
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <p>📍 Location: Bhubaneswar, India</p>
+            <p>📞 Phone: <a href="tel:+917815064177">+91 78150 64177</a></p>
+            <p>📧 Email: <a href="mailto:biswapritij15@gmail.com">biswapritij15@gmail.com</a></p>
+            <form action="/contact" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyrights &#169; www.subhamehndi.com | All rights reserved</p>
+        <div class="vertical">
+            <div class="icons">
+                <a href="https://www.youtube.com/@subhamehendi" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/biswapriti_132?igsh=MWkxZjhycHY2ZmEyZA==" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>         
+                <a href="https://www.facebook.com/riya.jena.355" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/biswapriti_132" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

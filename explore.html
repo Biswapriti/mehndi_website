@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUBHA MEHENDI - Explore More</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='explore.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+                <h1>SUBHA MEHENDI</h1>
+                <div id="menu">&#9776;</div>   <!-- Hamburger menu for responsive design --> 
+                <button id="backToTop" title="Go to top">&#8673;</button>                 
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('home') }}#about">About</a></li>
+                    <li><a href="{{ url_for('home') }}#gallery">Gallery</a></li>
+                    <li><a href="{{ url_for('home') }}#services">Services</a></li>
+                    <li><a href="{{ url_for('home') }}#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Traditional Mehendi Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+
+            <!-- About Us (Image Left, Content Right) -->
+            <div class="about-section">
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='bg1.jpg') }}" alt="Beautiful Mehendi Art">
+                </div>
+                <div class="about-content">
+                    <h2>About Us</h2>
+                    <p>Welcome to <strong>SUBHA MEHENDI</strong>, where tradition meets artistry. With years of experience in the world of Mehendi, we bring intricate and elegant designs that enhance the beauty of every special occasion.</p>
+                    
+                    <p>Mehendi, an ancient form of body art, has been a symbol of love, joy, and prosperity for centuries. At <strong>SUBHA MEHENDI</strong>, we take pride in preserving this tradition while adding a contemporary touch to suit modern preferences.</p>
+                </div>
+            </div>
+
+            <!-- Why Choose Us (Image Right, Content Left) -->
+            <div class="about-section reverse">
+                <div class="about-content">
+                    <h2>Why Choose Us?</h2>
+                    <ul>
+                        <li>🌿 <strong>100% Natural Henna</strong> – We use premium-quality, chemical-free henna for a rich and long-lasting stain.</li>
+                        <li>🎨 <strong>Customized Designs</strong> – Whether it's traditional bridal Mehendi, Indo-Arabic patterns, or minimalistic contemporary styles, we tailor designs to your preference.</li>
+                        <li>💖 <strong>Expertise & Precision</strong> – With years of experience, we ensure each stroke is perfect, creating mesmerizing designs.</li>
+                        <li>⏳ <strong>Quick Application & Staining</strong> – Our efficient techniques ensure fast application without compromising on quality.</li>
+                        <li>📍 <strong>Available for All Occasions</strong> – From weddings and festivals to baby showers and corporate events, we cater to all your Mehendi needs.</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='bg2.jpg') }}" alt="Why Choose Us">
+                </div>
+            </div>
+
+            <!-- Our Specialties (Image Left, Content Right) -->
+            <div class="about-section">
+                <div class="about-image">
+                    <img src="{{ url_for('static', filename='bg3.jpg') }}" alt="Our Specialties">
+                </div>
+                <div class="about-content">
+                    <h2>Our Specialties</h2>
+                    <p>Our Mehendi styles range from <em>elaborate bridal Mehendi</em> to <em>simple, elegant festive designs</em>. Some of our specialties include:</p>
+                    <ul>
+                        <li>🌸 <strong>Bridal Mehendi</strong> – Traditional, intricate designs covering hands and feet.</li>
+                        <li>🌿 <strong>Rajasthani & Marwari Mehendi</strong> – Highly detailed patterns with peacocks, florals, and cultural elements.</li>
+                        <li>💫 <strong>Arabic Mehendi</strong> – Bold and stylish designs with floral and vine patterns.</li>
+                        <li>🖌 <strong>Fusion & Modern Mehendi</strong> – Minimalistic, trendy, and unique patterns customized for you.</li>
+                        <li>🎊 <strong>Festive Mehendi</strong> – Perfect for Karva Chauth, Eid, Diwali, and other celebrations.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    
+    <!-- Types of Traditional Mehendi -->
+    <section class="mehendi-types">
+        <h2>OUR SERVICES</h2>
+        <div class="mehendi-container">
+
+            <div class="mehendi-item">
+                <h3>Bridal Mehendi</h3>
+                <a href="{{ url_for('bridal') }}">
+                    <img src="{{ url_for('static', filename='bridal_mehndi.jpg') }}" alt="Indian Mehendi"></a>
+            </div>
+            <div class="mehendi-item">
+                <h3>Traditional Mehendi</h3>
+                <a href="{{ url_for('bridal') }}">
+                    <img src="{{ url_for('static', filename='trad.jpg') }}" alt="Traditional Mehendi"></a>
+            </div>
+
+            <div class="mehendi-item">
+                <h3>Arabic Mehendi</h3>
+                <a href="{{ url_for('arabic') }}">
+                    <img src="{{ url_for('static', filename='arabic_mehndi.jpeg') }}" alt="Arabic Mehendi"></a>
+            </div>
+
+            <div class="mehendi-item">
+                <h3>Customized Mehendi</h3>
+                <a href="{{ url_for('customized') }}">
+                    <img src="{{ url_for('static', filename='custo5.jpg') }}" alt="Pakistani Mehendi"></a>
+            </div>
+
+            <div class="mehendi-item">
+                <h3>Festive Mehendi</h3>
+                <a href="{{ url_for('festive') }}">
+                    <img src="{{ url_for('static', filename='festive.jpg') }}" alt="Moroccan Mehendi"></a>
+            </div>
+
+            <!-- <div class="mehendi-item">
+                <h3>Indo-Arabic Mehendi</h3>
+                <img src="indo_arabic_mehendi.jpg" alt="Indo-Arabic Mehendi">
+                <p>A mix of Arabic outlines with Indian detailing.</p>
+            </div>
+
+            <div class="mehendi-item">
+                <h3>Rajasthani Mehendi</h3>
+                <img src="rajasthani_mehendi.jpg" alt="Rajasthani Mehendi">
+                <p>Rich in peacocks, kings, and queens, inspired by royal Rajasthani art.</p>
+            </div> -->
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-container">
+            <p><i class="fa-solid fa-phone"></i> Phone: <a href="tel:+917815064177">+91 78150 64177</a></p>
+            <p><i class="fa-solid fa-envelope"></i> Email: <a
+                    href="mailto:biswapritij15@gmail.com">biswapritij15@gmail.com</a></p>
+            <p><i class="fa-solid fa-map-marker-alt"></i> Address: Bhubaneswar, Odisha, India</p>
+            <p><i class="fa-solid fa-map"></i> <a href="https://goo.gl/maps/dt5jSg8bGdT2" target="_blank">View on Google
+                    Maps</a></p>
+        </div>
+    </section>
+
+    <section class="offer">
+        <h2>Limited Time Offer!</h2>
+        <p>Book within <span id="countdown"></span> to get 10% off on all bridal packages!</p>
+    </section>
+
+    <script>
+        function startCountdown(durationInMinutes) {
+            let endTime = new Date().getTime() + durationInMinutes * 60 * 1000;
+
+            function updateCountdown() {
+                let now = new Date().getTime();
+                let timeLeft = endTime - now;
+
+                if (timeLeft < 0) {
+                    document.getElementById("countdown").innerHTML = "Offer Expired! 😞";
+                    clearInterval(timer);
+                    return;
+                }
+
+                let minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+                let seconds = Math.floor((timeLeft / 1000) % 60);
+
+                document.getElementById("countdown").innerHTML = minutes + "m " + seconds + "s";
+            }
+
+            let timer = setInterval(updateCountdown, 1000);
+            updateCountdown();
+        }
+
+        startCountdown(15);
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Copyrights &#169; www.subhamehndi.com | All rights reserved</p>
+        <div class="vertical">
+            <div class="icons">
+                <a href="https://www.youtube.com/@subhamehendi" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/biswapriti_132?igsh=MWkxZjhycHY2ZmEyZA==" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>         
+                <a href="https://www.facebook.com/deeptimayee.pradhan.123377298" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/biswapriti_132" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Booking Link -->
+    <a href="https://wa.me/917815064177?text=I'm%20interested%20in%20exploring%20more%20Mehendi%20services" class="whatsapp-btn"
+        target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> Chat with Us
+    </a>
+
+    <!-- JavaScript for Booking -->
+    <script>
+        function bookNow(packageName, price) {
+            let whatsappNumber = "917815064177";
+            let message = `Hello, I'm interested in the ${packageName} package for ₹${price}. Can I book an appointment?`;
+            window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>

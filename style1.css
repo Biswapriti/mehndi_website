@@ -1,0 +1,399 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fcbcb9
+}
+
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 500;
+    display: flex;
+    justify-content: space-between;
+    height: 2.5rem;
+    background: #a52a2a;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.right ul {
+    list-style: none;
+    display: flex;
+}
+
+.right ul li {
+    margin: 0 15px;
+}
+
+.right ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.right ul li a:hover {
+    color: rgb(255, 200, 0);
+}
+
+
+/* Hamburger menu styles */
+#menu {
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    display: none;
+    margin-left: 90px;
+    margin-top: -4px;
+}
+
+@media (max-width: 480px) {
+    #menu {
+        display: block;
+    }
+    
+    nav .right ul {
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        background-color: rgba(14, 15, 49, 0.7);
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+    }
+    nav .right ul li {
+        margin: 20px 0;
+    }
+
+    nav .right ul li a {
+        font-size: 1.2rem;
+    }
+
+    nav .right ul.nav-toggle {
+        left: 0;
+        margin-top: 0;
+    }
+}
+
+/* Bridal Mehendi Packages */
+.services {
+    text-align: center;
+    padding: 60px 5%;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.package-item {
+    width: 280px;
+    background: #f9bebe;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.package-item img {
+    width: 100%;
+    height: 250px;
+    object-fit:cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.package-item h3 {
+    color: #a52a2a;
+    font-size: 20px;
+}
+
+.package-item p {
+    font-size: 14px;
+    color: #555;
+}
+
+.package-item strong {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+}
+
+.services {
+    text-align: center;
+    padding: 60px 5%;
+    /* background: #ffefdb;
+    padding: 1px 20px; */
+}
+
+.services h2 {
+    font-size: 40px;
+    font-style: italic;
+    color: #a52a2a;
+    margin-bottom: 45px;
+    margin-top: 30px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+    /* margin: 30px 200px; */
+    border-radius: 10px;
+    background-color: #e44c66;
+}
+
+.service-item {
+    width: 250px;
+    height: 350px;
+    background: rgb(14, 14, 14);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.service-item h3 {
+    color: #fffbfb;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+/* Book Now Button */
+.book-btn {
+    background: #a52a2a;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+    background: #ffcc00;
+    color: #a52a2a;
+}
+
+.custom-hr {
+    border: none;
+    height: 2px;
+    background-color: #890909; 
+    margin: 20px 0; /* Add spacing above and below */
+    width: 80%; /* Optional: Adjust the width */
+    margin-left: auto; /* Center align */
+    margin-right: auto; /* Center align */
+}
+
+/* Contact Section */
+.contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+}
+
+.contact-container p {
+    margin: 10px 0;
+}
+
+.contact-container a {
+    text-decoration: none;
+    color: #d63384;
+    font-weight: bold;
+}
+
+.contact-container a:hover {
+    color: #b42a6b;
+}
+
+
+.offer {
+    background: #356d00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#countdown {
+    color: #ffcc00;
+    font-size: 22px;
+}
+
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.whatsapp-btn i {
+    margin-right: 8px;
+    font-size: 22px;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+}
+/* html {
+    scroll-behavior: smooth;
+} */
+
+
+
+/* Footer Section */
+footer {
+    background-color: #a52a2a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.vertical {
+    margin-top: 10px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.icons i {
+    color: white;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.icons i:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .right ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+
+    .right ul li {
+        margin: 50px 0;
+    }
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        margin: -8px -70px -20px -10px;            
+        flex-direction: row;
+        align-items: center;     
+    }    
+    
+    .logo img {
+        height: 60px;
+        margin-top: -2px;
+    }
+
+    .logo h1 {
+        font-size: 24px; /* Adjust logo text size */
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .package-item {
+        width: 90%;
+    }
+}
+
+/* Back to Top Button */
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 50px 0;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #e67e22;
+    transform: scale(1.1);
+}
+
